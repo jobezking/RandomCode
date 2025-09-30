@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 class UnsupervisedWorker:   
@@ -25,7 +26,6 @@ class UnsupervisedWorker:
         self.X_df = (self.X_df - self.X_df.mean()) / self.X_df.std()
     
     def runKMeans(self, K=3):
-        from sklearn.cluster import KMeans
         kmeans = KMeans(K, random_state=42, n_init='auto')
         kmeans.fit(self.X_df.values)
         self.labels = kmeans.labels_
