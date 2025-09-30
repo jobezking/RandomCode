@@ -13,6 +13,8 @@ class UnsupervisedWorker:
 
         # placeholders for data
         self.X_df = None
+        self.X_df_cp = None
+        ###
         self.labels = None
         self.centroids = None
 
@@ -21,6 +23,10 @@ class UnsupervisedWorker:
           self.X_df = pd.read_csv(self.csv_file)
        else:
            self.X_df = pd.read_csv(self.csv_file, header=None)
+       self.X_df_cp = self.X_df.copy()
+
+    def reload(self):
+        self.X_df = self.X_df_cp.copy()
 
     def zscore_normalize(self):
         self.X_df = (self.X_df - self.X_df.mean()) / self.X_df.std()
@@ -52,7 +58,7 @@ class UnsupervisedWorker:
 
 ################
 def main():
-    pass
+    doML = UnsupervisedWorker("df.csv", header=False)
 
 #####
 if __name__ == "__main__":

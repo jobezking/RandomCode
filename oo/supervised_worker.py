@@ -16,8 +16,11 @@ class SupervisedWorker:
 
         # placeholders for data
         self.X_d = None
-        self.X = None
         self.Y = None
+        self.X_d_cp = None
+        self.Y_cp = None
+        ###
+        self.X = None
         self.X_train = None
         self.X_test = None
         self.Y_train = None
@@ -31,6 +34,12 @@ class SupervisedWorker:
             df = pd.read_csv(self.csv_file, header=None)
         self.X_d = df.iloc[:, :-1]
         self.Y = df.iloc[:, -1:]
+        self.X_d_cp = self.X_d.copy()
+        self.Y_cp = self.Y.copy()
+        
+    def reload(self):
+        self.X_d = self.X_d_cp.copy()
+        self.Y = self.Y_cp.copy()
 
     def min_max_normalize(self):
         normalizer = MinMaxScaler()
