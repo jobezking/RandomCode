@@ -22,7 +22,7 @@ class UnsupervisedWorker:
            self.X_df = pd.read_csv(self.csv_file, header=None)
 
     def zscore_normalize(self):
-        X_df = (self.X_df - self.X_df.mean()) / self.X_df.std()
+        self.X_df = (self.X_df - self.X_df.mean()) / self.X_df.std()
     
     def runKMeans(self, K=3):
         from sklearn.cluster import KMeans
