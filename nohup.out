@@ -1,0 +1,66 @@
+[I 2025-10-11 19:15:10.120 ServerApp] Extension package panel.io.jupyter_server_extension took 0.6483s to import
+[I 2025-10-11 19:15:10.120 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-10-11 19:15:10.122 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-10-11 19:15:10.124 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-10-11 19:15:10.126 ServerApp] notebook | extension was successfully linked.
+[I 2025-10-11 19:15:10.339 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-10-11 19:15:10.339 ServerApp] panel.io.jupyter_server_extension | extension was successfully linked.
+[I 2025-10-11 19:15:10.350 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-10-11 19:15:10.352 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-10-11 19:15:10.352 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-10-11 19:15:10.357 LabApp] JupyterLab extension loaded from /opt/anaconda3/lib/python3.13/site-packages/jupyterlab
+[I 2025-10-11 19:15:10.357 LabApp] JupyterLab application directory is /opt/anaconda3/share/jupyter/lab
+[I 2025-10-11 19:15:10.357 LabApp] Extension Manager is 'pypi'.
+[I 2025-10-11 19:15:10.390 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-10-11 19:15:10.392 ServerApp] notebook | extension was successfully loaded.
+[I 2025-10-11 19:15:10.392 ServerApp] panel.io.jupyter_server_extension | extension was successfully loaded.
+[I 2025-10-11 19:15:10.393 ServerApp] Serving notebooks from local directory: /home/jeking/github/RandomCode/ksu
+[I 2025-10-11 19:15:10.393 ServerApp] Jupyter Server 2.16.0 is running at:
+[I 2025-10-11 19:15:10.393 ServerApp] http://localhost:8888/tree?token=8ef91adb0fb4be69d4d4d56d96218a1259b5aa78ccf387b7
+[I 2025-10-11 19:15:10.393 ServerApp]     http://127.0.0.1:8888/tree?token=8ef91adb0fb4be69d4d4d56d96218a1259b5aa78ccf387b7
+[I 2025-10-11 19:15:10.393 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-10-11 19:15:10.408 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jeking/.local/share/jupyter/runtime/jpserver-47446-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=8ef91adb0fb4be69d4d4d56d96218a1259b5aa78ccf387b7
+        http://127.0.0.1:8888/tree?token=8ef91adb0fb4be69d4d4d56d96218a1259b5aa78ccf387b7
+[I 2025-10-11 19:15:10.602 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-10-11 19:15:22.144 ServerApp] Creating new notebook in 
+[I 2025-10-11 19:15:25.215 ServerApp] Kernel started: 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9
+[I 2025-10-11 19:15:25.573 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[W 2025-10-11 19:15:25.574 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2025-10-11 19:15:25.586 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:15:25.597 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:15:30.938 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:8b890f89-050a-4275-a442-49b2b95f408c
+[I 2025-10-11 19:15:32.091 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:15:32.138 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:93e1f148-4de6-4397-9d81-be0f7663ae8f
+[I 2025-10-11 19:15:34.217 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:15:34.353 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:bb29a8da-667a-4948-b2f0-dcb366772980
+[I 2025-10-11 19:15:57.574 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:15:57.736 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:e06b9eee-9540-484e-a5dd-7d9399269189
+[I 2025-10-11 19:16:01.970 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:16:02.166 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:ffe9b7ac-99df-4f8a-bd24-9c49d09bd031
+[I 2025-10-11 19:16:04.017 ServerApp] Kernel started: d837862c-42c7-4338-9a15-29459fb41221
+[I 2025-10-11 19:16:04.463 ServerApp] Connecting to kernel d837862c-42c7-4338-9a15-29459fb41221.
+[I 2025-10-11 19:18:02.705 ServerApp] Saving file at /boxofficeMLprediction.ipynb
+[I 2025-10-11 19:25:33.638 ServerApp] Uploading file to /Box_Office_Revenue_Prediction_Using_Linear_Regression_in_ML.ipynb
+[I 2025-10-11 19:25:38.962 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:25:38.975 ServerApp] Connecting to kernel d837862c-42c7-4338-9a15-29459fb41221.
+[I 2025-10-11 19:25:39.078 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:bf30a9a5-ad73-44ca-bb08-7528465dcc5d
+[W 2025-10-11 19:25:40.006 ServerApp] Notebook Box_Office_Revenue_Prediction_Using_Linear_Regression_in_ML.ipynb is not trusted
+[I 2025-10-11 19:25:40.379 ServerApp] Connecting to kernel 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9.
+[I 2025-10-11 19:25:40.391 ServerApp] Connecting to kernel d837862c-42c7-4338-9a15-29459fb41221.
+[W 2025-10-11 19:25:40.546 ServerApp] Notebook Box_Office_Revenue_Prediction_Using_Linear_Regression_in_ML.ipynb is not trusted
+[I 2025-10-11 19:25:40.550 ServerApp] Starting buffering for 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9:38f988ad-6564-4408-b0bc-b2152d744f4c
+[I 2025-10-11 19:25:40.752 ServerApp] Kernel started: 3d630726-c3d1-4a18-a381-7938f2241aa5
+[I 2025-10-11 19:25:41.079 ServerApp] Connecting to kernel 3d630726-c3d1-4a18-a381-7938f2241aa5.
+[I 2025-10-11 19:26:24.382 ServerApp] Starting buffering for 3d630726-c3d1-4a18-a381-7938f2241aa5:1dc62c1a-1fa0-4686-9271-d0ad55d8e834
+[I 2025-10-11 19:26:25.632 ServerApp] Starting buffering for d837862c-42c7-4338-9a15-29459fb41221:6726db8a-16e6-4443-94a2-ea468ec857b4
+[I 2025-10-11 19:26:33.619 ServerApp] Kernel shutdown: 2d4e6f4c-dde7-48c9-8a9f-940fee6b56a9
+[I 2025-10-11 19:26:33.620 ServerApp] Kernel shutdown: d837862c-42c7-4338-9a15-29459fb41221
+[I 2025-10-11 19:26:33.620 ServerApp] Kernel shutdown: 3d630726-c3d1-4a18-a381-7938f2241aa5
+[I 2025-10-11 19:26:33.839 ServerApp] Shutting down on /api/shutdown request.
+[I 2025-10-11 19:26:33.839 ServerApp] Shutting down 6 extensions
