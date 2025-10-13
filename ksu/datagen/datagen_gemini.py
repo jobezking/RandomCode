@@ -56,3 +56,5 @@ df3.to_csv('data/atlanta_housing_v3.csv', index=False)
 
 print("Generated 3 CSV files in 'data/' directory.")
 print("Dataset 1 Head:\n", df1.head())
+print("Dataset 2 Head:\n", df2.head())
+print("Dataset 3 Head:\n", df3.head())

@@ -37,7 +37,14 @@ def base_core(n):
 def price_function(df, extras=None, noise_scale=25000):
     # Feature engineering inside generator to define realistic pricing
     age = 2025 - df['construction_year']
-    reno_age = np.where(df['renovation_year'].notna(), 2025 - df['renovation_year'], age)
+
+    if 'renovation_year' in df.columns:
+        reno_age = np.where(df['renovation_year'].notna(),
+                            2025 - df['renovation_year'],
+                            age)
+    else:
+        reno_age = age
+
     zip_factor = df['zip_code'].map({
         '30301': 1.08, '30305': 1.22, '30309': 1.25, '30318': 1.10,
         '30328': 1.18, '30338': 1.15, '30030': 1.20, '30080': 1.05, '30144': 0.95
@@ -103,6 +110,8 @@ def save_datasets():
     df3.to_csv('data/housing_dataset_v3.csv', index=False)
     print("Datasets saved to 'data/' directory.")
     print("Dataset 1 Head:\n", df1.head())
+    print("Dataset 2 Head:\n", df2.head())
+    print("Dataset 3 Head:\n", df3.head())
 
 if __name__ == "__main__":
     save_datasets()
