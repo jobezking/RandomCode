@@ -4,7 +4,7 @@ import subprocess
 import shlex
 
 # This script converts all MP4 video files in the current directory
-# to MP3 audio files using ffmpeg with Nvidia hardware acceleration.
+# to MP3 audio files using ffmpeg with Nvidia hardware acceleration!
 
 def convert_videos_to_audio(source_directory='.', output_directory='audio'):
     """
