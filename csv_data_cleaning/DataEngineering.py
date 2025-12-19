@@ -1,5 +1,6 @@
 #Useful data transformation functions
 from numpy import log, log1p
+import matplotlib.pyplot as plt
 from scipy.stats import boxcox
 import seaborn as sns
 import math
