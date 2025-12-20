@@ -35,11 +35,12 @@ EPOCHS = 10
 SPLIT = 0.2
 
 # --- Step 1: Build datasets directly from directory ---
+# Step 1: Build raw datasets
 train_datasets = []
 val_datasets = []
 
 for data_dir in data_dirs:
-    train_ds = tf.keras.utils.image_dataset_from_directory(
+    train_ds_raw = tf.keras.utils.image_dataset_from_directory(
         data_dir,
         validation_split=SPLIT,
         subset="training",
@@ -47,7 +48,7 @@ for data_dir in data_dirs:
         image_size=(IMG_SIZE, IMG_SIZE),
         batch_size=BATCH_SIZE
     )
-    val_ds = tf.keras.utils.image_dataset_from_directory(
+    val_ds_raw = tf.keras.utils.image_dataset_from_directory(
         data_dir,
         validation_split=SPLIT,
         subset="validation",
@@ -55,20 +56,24 @@ for data_dir in data_dirs:
         image_size=(IMG_SIZE, IMG_SIZE),
         batch_size=BATCH_SIZE
     )
-    train_datasets.append(train_ds)
-    val_datasets.append(val_ds)
+    train_datasets.append(train_ds_raw)
+    val_datasets.append(val_ds_raw)
 
-# Concatenate lung + colon datasets
+# Step 2: Concatenate raw datasets
 train_ds = train_datasets[0].concatenate(train_datasets[1])
 val_ds = val_datasets[0].concatenate(val_datasets[1])
 
-# --- Step 2: Prefetch and cache for performance ---
+# Step 3: Extract class names BEFORE caching
+class_names = train_datasets[0].class_names
+num_classes = len(class_names)
+
+# Step 4: Cache and prefetch
 AUTOTUNE = tf.data.AUTOTUNE
 train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
 val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 
-# --- Step 3: Define CNN model ---
-num_classes = len(train_ds.class_names)
+# --- Step 5: Define CNN model ---
+#num_classes = len(train_ds.class_names)
 
 model = keras.models.Sequential([
     layers.Rescaling(1./255, input_shape=(IMG_SIZE, IMG_SIZE, 3)),
@@ -87,11 +92,14 @@ model = keras.models.Sequential([
     layers.Dense(num_classes, activation='softmax')
 ])
 
+with open("model_summary.txt", "w") as f: 
+    model.summary(print_fn=lambda x: f.write(x + "\n"))
+
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# --- Step 4: Train with callbacks ---
+# --- Step 6: Train with callbacks ---
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
 es = EarlyStopping(patience=3, monitor='val_accuracy', restore_best_weights=True)
@@ -102,7 +110,23 @@ history = model.fit(train_ds,
                     epochs=EPOCHS,
                     callbacks=[es, lr])
 
-# --- Step 5: Plot training history ---
+# ✅ After training, generate predictions for the validation set 
+y_true = [] 
+y_pred = []
+
+for images, labels in val_ds: 
+    preds = model.predict(images) 
+    y_true.extend(labels.numpy()) 
+    y_pred.extend(preds.argmax(axis=1)) 
+    
+from sklearn import metrics 
+report = metrics.classification_report(y_true, y_pred, target_names=class_names) 
+
+# ✅ Save classification report 
+with open("classification_report.txt", "w") as f: 
+    f.write(report)
+
+# --- Step 7: Plot training history ---
 history_df = pd.DataFrame(history.history)
 history_df.loc[:, ['accuracy', 'val_accuracy']].plot()
 plt.title('Training Accuracy vs Validation Accuracy')
