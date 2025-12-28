@@ -1,0 +1,53 @@
+[I 2025-12-27 20:46:39.187 ServerApp] Extension package panel.io.jupyter_server_extension took 0.5014s to import
+[I 2025-12-27 20:46:39.188 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-12-27 20:46:39.190 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-12-27 20:46:39.192 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-12-27 20:46:39.193 ServerApp] notebook | extension was successfully linked.
+[I 2025-12-27 20:46:39.360 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-12-27 20:46:39.360 ServerApp] panel.io.jupyter_server_extension | extension was successfully linked.
+[I 2025-12-27 20:46:41.791 ServerApp] nb_conda_kernels | enabled, 4 kernels found.
+[I 2025-12-27 20:46:41.803 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-12-27 20:46:41.805 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-12-27 20:46:41.805 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-12-27 20:46:41.810 LabApp] JupyterLab extension loaded from /opt/anaconda3/lib/python3.13/site-packages/jupyterlab
+[I 2025-12-27 20:46:41.810 LabApp] JupyterLab application directory is /opt/anaconda3/share/jupyter/lab
+[I 2025-12-27 20:46:41.810 LabApp] Extension Manager is 'pypi'.
+[I 2025-12-27 20:46:41.844 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-12-27 20:46:41.845 ServerApp] notebook | extension was successfully loaded.
+[I 2025-12-27 20:46:41.846 ServerApp] panel.io.jupyter_server_extension | extension was successfully loaded.
+[I 2025-12-27 20:46:41.846 ServerApp] Serving notebooks from local directory: /home/jeking/github/RandomCode/csv_data_cleaning
+[I 2025-12-27 20:46:41.846 ServerApp] Jupyter Server 2.16.0 is running at:
+[I 2025-12-27 20:46:41.846 ServerApp] http://localhost:8888/tree?token=9bff0cd312e920b441404ca7dbac11353c47470e8d5c4c74
+[I 2025-12-27 20:46:41.846 ServerApp]     http://127.0.0.1:8888/tree?token=9bff0cd312e920b441404ca7dbac11353c47470e8d5c4c74
+[I 2025-12-27 20:46:41.846 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-12-27 20:46:41.860 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jeking/.local/share/jupyter/runtime/jpserver-5342-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=9bff0cd312e920b441404ca7dbac11353c47470e8d5c4c74
+        http://127.0.0.1:8888/tree?token=9bff0cd312e920b441404ca7dbac11353c47470e8d5c4c74
+[I 2025-12-27 20:46:42.061 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-12-27 20:47:36.345 ServerApp] Kernel started: c45e9c3f-7763-479f-a0c0-d9d65552ed6d
+[I 2025-12-27 20:47:36.855 ServerApp] Adapting from protocol version 5.3 (kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d) to 5.4 (client).
+[I 2025-12-27 20:47:36.855 ServerApp] Connecting to kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d.
+[W 2025-12-27 20:47:36.856 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2025-12-27 20:47:36.867 ServerApp] Adapting from protocol version 5.3 (kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d) to 5.4 (client).
+[I 2025-12-27 20:47:36.868 ServerApp] Connecting to kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d.
+[I 2025-12-27 20:47:36.879 ServerApp] Adapting from protocol version 5.3 (kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d) to 5.4 (client).
+[I 2025-12-27 20:47:36.879 ServerApp] Connecting to kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d.
+[I 2025-12-27 20:47:43.613 ServerApp] Adapting from protocol version 5.3 (kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d) to 5.4 (client).
+[I 2025-12-27 20:47:43.614 ServerApp] Connecting to kernel c45e9c3f-7763-479f-a0c0-d9d65552ed6d.
+[I 2025-12-27 20:53:36.207 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 20:55:36.242 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:01:36.316 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:03:36.378 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:05:36.402 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:07:36.460 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:09:36.523 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:09:58.432 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:10:35.128 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:12:35.167 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:14:35.220 ServerApp] Saving file at /EDA1.ipynb
+[I 2025-12-27 21:15:09.419 ServerApp] Saving file at /EDA1.ipynb
