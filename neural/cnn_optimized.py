@@ -10,10 +10,24 @@ import os
 import glob
 import pathlib
 from PIL import Image
+from zipfile import ZipFile
+from datetime import datetime
 
+data_path = 'lung-and-colon-cancer-histopathological-images.zip'
+if os.path.isdir("lung_colon_image_set"):
+    print("Directory already exists, skipping extraction.")
+else:
+    with ZipFile(data_path,'r') as zip:
+        zip.extractall()
+        print('The data set has been extracted.')
+
+now = datetime.now()
+timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+with open("log.txt", mode='a') as file:
+    file.write(f"{timestamp}\n")
 # --- CONFIGURATION ---
-IMG_SIZE = 256
-BATCH_SIZE = 32
+IMG_SIZE = 512 #original 256
+BATCH_SIZE = 16 #original 32
 EPOCHS = 15  # Increased slightly as data pipeline is faster
 DATA_DIR = 'lung_colon_image_set' # Base folder name
 
@@ -201,3 +215,9 @@ with open("classification_report.txt", "w") as f:
     f.write(report)
 
 print("DONE. Check output files.")
+
+now = datetime.now()
+timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+with open("log.txt", mode='a') as file:
+    file.write(f"{timestamp}\n")
+
